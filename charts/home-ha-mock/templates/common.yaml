@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: DeploymentSet
+metadata:
+  name: {{ .Values.application.appName }}
+  labels:
+    name: {{ .Values.application.appName }}
+    role: agent
+spec:
+  updateStrategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels: 
+        name: {{ .Values.application.appName }}
+      annotations:
+        node.kubernetes.io/bootstrap-checkpoint: "true"
+    spec: 
+      hostname: {{ .Values.application.appName }}
+      hostNetwork: false
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+      - name: {{ .Values.application.appName }}
+        image: {{ .Values.application.appName }}k
+        env:
+        - name: HAMOCK_INFER
+          value: "true"
+        - name: HAMOCK_OPENAI_MODEL
+          value: {{ .Values.configuration.model }}
+        - name: HAMOCK_OPENAI_URL
+          value: http://{{ .Values.configuration.nameGuest }}:{{ .Values.configuration.portGuest }}
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: ["ALL"]
+      terminationGracePeriodSeconds: 30

@@ -1,0 +1,11 @@
+# Default values for smarter-edge.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+application:
+  appName: home-ha-mock
+
+configuration:
+  nameGuest: ollama
+  portGuest: 31434
+  model: llama3.2:1b-instruct-q4_K_M
