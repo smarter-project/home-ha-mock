@@ -15,7 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code and sample data
 COPY hamock.py .
-COPY state_replay.log .
 
 # Make the script executable
 RUN chmod +x hamock.py
