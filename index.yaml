@@ -1,0 +1,30 @@
+apiVersion: v1
+entries:
+  home-ha-mock:
+  - annotations:
+      artifacthub.io/changes: |
+        - Initial release
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/maintainers: |
+        - name: Eric Van Hensbergen
+          email: ericvh@gmail.com
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 71EDA4E3D652DC73EB09E3A5387D298C169CF24E
+        url: https://smarter-project.github.io/documentation/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 2.0.0
+    created: "2025-02-25T21:14:07.987680288Z"
+    description: Smarter-Home security home assistant emulator
+    digest: 69e6d37dcac56cbda011144bfb9d131c2d15849f2460b36e256a2c46d3141444
+    home: https://getsmarter.io
+    icon: https://github.com/smarter-project/documentation/raw/main/ARM1636_Project_Logo_ST2_RGB_V1.png
+    kubeVersion: '>=1.18.0-0'
+    name: home-ha-mock
+    sources:
+    - https://github.com/smarter-project/documentation
+    type: application
+    urls:
+    - https://github.com/smarter-project/home-ha-mock/releases/download/home-ha-mock-2.0.1/home-ha-mock-2.0.1.tgz
+    version: 2.0.1
+generated: "2025-02-25T21:14:07.987689606Z"
