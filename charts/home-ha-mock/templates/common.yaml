@@ -28,6 +28,10 @@ spec:
           value: {{ .Values.configuration.model }}
         - name: HAMOCK_OPENAI_URL
           value: http://{{ .Values.configuration.nameGuest }}:{{ .Values.configuration.portGuest }}
+        {{- if .Values.configuration.urlLog }}
+        - name: HAMMOCK_DOWNLOAD_URL
+          value: {{ .Values.configuration.urlLog }}
+        {{- end }}
         imagePullPolicy: IfNotPresent
         securityContext:
           allowPrivilegeEscalation: false

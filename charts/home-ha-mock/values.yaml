@@ -11,3 +11,4 @@ configuration:
   nameGuest: ollama
   portGuest: 31434
   model: llama3.2:1b-instruct-q4_K_M
+  #  urlLog: https://artifactory.nahpc2.arm.com:443/artifactory/atg-attk.edgeai/home-security/mvp2/state_replay.log
