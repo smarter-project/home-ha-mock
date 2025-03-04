@@ -5,7 +5,7 @@
 application:
   appName: home-ha-mock
   image: ghcr.io/smarter-project/home-ha-mock
-  imageVersion: sha256-b6de05f524f5cb3a41497a86735173e84ae5feb4c4a50bdb7543a69eaf1f59c6.sig
+  imageVersion: main
 
 configuration:
   nameGuest: home-orchestrator-ollama-guest
