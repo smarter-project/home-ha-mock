@@ -1,5 +1,1 @@
 Your security example is installed. 
-To deploy the application in a node it needs to be labeled.
-Use the following commands:
-kubectl label node <nodename> security-demo-mvp2-ollama=enabled
-kubectl label node <nodename> security-demo-mvp2-orchestrator=enabled

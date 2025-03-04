@@ -20,7 +20,7 @@ spec:
       dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: {{ .Values.application.appName }}
-        image: {{ .Values.application.image }};{{ .Values.application.imageVersion }}
+        image: {{ .Values.application.image }}:{{ .Values.application.imageVersion }}
         env:
         - name: HAMOCK_INFER
           value: "true"
