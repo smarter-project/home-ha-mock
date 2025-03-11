@@ -1,26 +1,26 @@
 apiVersion: apps/v1
-kind: DeploymentSet
+kind: Deployment
 metadata:
   name: {{ .Values.application.appName }}
   labels:
     name: {{ .Values.application.appName }}
     role: agent
 spec:
-  updateStrategy:
-    type: RollingUpdate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.application.appName }}
   template:
     metadata:
-      labels: 
-        name: {{ .Values.application.appName }}
-      annotations:
-        node.kubernetes.io/bootstrap-checkpoint: "true"
+      labels:
+        app: {{ .Values.application.appName }}
     spec: 
       hostname: {{ .Values.application.appName }}
       hostNetwork: false
       dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: {{ .Values.application.appName }}
-        image: {{ .Values.application.image }};{{ .Values.application.imageVersion }}
+        image: {{ .Values.application.image }}:{{ .Values.application.imageVersion }}
         env:
         - name: HAMOCK_INFER
           value: "true"
@@ -28,6 +28,10 @@ spec:
           value: {{ .Values.configuration.model }}
         - name: HAMOCK_OPENAI_URL
           value: http://{{ .Values.configuration.nameGuest }}:{{ .Values.configuration.portGuest }}
+        {{- if .Values.configuration.urlLog }}
+        - name: HAMMOCK_DOWNLOAD_URL
+          value: {{ .Values.configuration.urlLog }}
+        {{- end }}
         imagePullPolicy: IfNotPresent
         securityContext:
           allowPrivilegeEscalation: false

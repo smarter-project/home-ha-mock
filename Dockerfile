@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code and sample data
-COPY hamock.py .
+COPY hamock.* .
 
 # Make the script executable
 RUN chmod +x hamock.py
@@ -28,6 +28,7 @@ ENV HAMOCK_OPENAI_URL=http://localhost:11434
 ENV HAMOCK_OPENAI_MODEL=llama3.2-vision:latest
 ENV HAMOCK_DISPLAY_STATS=false
 ENV HAMOCK_INFER=true
+#ENV HAMMOCK_DOWNLOAD_URL=<if set where to download the log from>
 
 # Use hamock.py as entrypoint
-ENTRYPOINT ["./hamock.py", "replay", "--input", "state_replay.log"]
+ENTRYPOINT ["./hamock.sh", "replay", "--input", "state_replay.log"]
