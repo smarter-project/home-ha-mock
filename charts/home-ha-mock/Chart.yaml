@@ -33,9 +33,9 @@ annotations:
     - Initial release
   artifacthub.io/license: Apache-2.0
   artifacthub.io/maintainers: |
-    - name: Eric Van Hensbergen
-      email: ericvh@gmail.com
+    - name: Alexandre Ferreira
+      email: alexandref75@gmail.com
   artifacthub.io/prerelease: "false"
   artifacthub.io/signKey: |
-    fingerprint: 71EDA4E3D652DC73EB09E3A5387D298C169CF24E
-    url: https://smarter-project.github.io/documentation/pgp_keys.asc
+    fingerprint: 82AD709FEC4ECA4C84B093889BDC9DE410CFC23B
+    url: https://smarter-project.github.io/home-ha-mock/pgp_keys.asc
