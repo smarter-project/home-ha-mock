@@ -7,7 +7,9 @@ For more information on smarter go to https://getsmarter.io
 ## TL;DR
 
 ```console
-helm install --create-namespace --namespace <namespace to use>  home-ha-mock home-ha-mock
+helm repo add home-ha-mock https://smarter-project.github.io/home-ha-mock/
+helm install --create-namespace --namespace <namespace to use> --set "configuration.urlLog=<URL to download the replay log>" home-ha-mock hhome-ha-mock/home-ha-mock
+
 ```
 
 # Overview
@@ -33,3 +35,4 @@ helm delete home-ha-mock --namespace <namespace to use>
 
 | Name | Description | Value |
 | ---- | ----------- | ----- |
+| configuration.urlLog | URL of the replay log | |
