@@ -14,6 +14,32 @@ entries:
         url: https://smarter-project.github.io/home-ha-mock/pgp_keys.asc
     apiVersion: v2
     appVersion: 2.0.2
+    created: "2025-03-12T14:17:37.920929689Z"
+    description: Smarter-Home security home assistant emulator
+    digest: d846a03da08687e7c5ce36170c40a0e35d8c31baa1152900229b0016edb4637c
+    home: https://getsmarter.io
+    icon: https://github.com/smarter-project/documentation/raw/main/ARM1636_Project_Logo_ST2_RGB_V1.png
+    kubeVersion: '>=1.18.0-0'
+    name: home-ha-mock
+    sources:
+    - https://github.com/smarter-project/documentation
+    type: application
+    urls:
+    - https://github.com/smarter-project/home-ha-mock/releases/download/home-ha-mock-2.0.5/home-ha-mock-2.0.5.tgz
+    version: 2.0.5
+  - annotations:
+      artifacthub.io/changes: |
+        - Initial release
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/maintainers: |
+        - name: Alexandre Ferreira
+          email: alexandref75@gmail.com
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 82AD709FEC4ECA4C84B093889BDC9DE410CFC23B
+        url: https://smarter-project.github.io/home-ha-mock/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 2.0.2
     created: "2025-03-11T18:02:04.718405422Z"
     description: Smarter-Home security home assistant emulator
     digest: 625d7be7f78c9098f5d055d0122e5334815de493124e5ab12e095d225ef994cd
@@ -105,4 +131,4 @@ entries:
     urls:
     - https://github.com/smarter-project/home-ha-mock/releases/download/home-ha-mock-2.0.1/home-ha-mock-2.0.1.tgz
     version: 2.0.1
-generated: "2025-03-11T18:02:04.718421993Z"
+generated: "2025-03-12T14:17:37.920954446Z"
